@@ -1,3 +1,61 @@
+$gold: #ffdc00;
+
+body {
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+}
+
+.py-reg {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
 .navbar-bg {
-  background-color: yellow;
+  background-color: $gold;
+}
+
+#headline {
+  background: url('./assets/placeholder.png');
+  .btn {
+  font-size: large;
+  font-weight: bold;
+  width: 175px;
+  background-color: $gold;
+  }
+
+  .btn:hover {
+    color: $gold;
+    background-color: black;
+  }
+
+  .btn:focus {
+  box-shadow: none;
+  }
+}
+
+.exchange-rate-box {
+  padding: 3rem;
+  border: 1px solid gray;
+  border-radius: 2rem;
+  background: #dcdcdc8f;
+
+  ul {
+    list-style: disclosure-closed;
+    padding-left: 16px;
+    margin: 0;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    li {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+   padding-top: 0.7rem;
+   padding-bottom: 00.7rem;
+  }
 }
