@@ -15,11 +15,16 @@ body {
 
 #headline {
   background: url('./assets/placeholder.png');
+
+  h1 {
+    font-size: calc(1.7rem + 1.5vw);
+  }
+
   .btn {
-  font-size: large;
-  font-weight: bold;
-  width: 175px;
-  background-color: $gold;
+    font-size: large;
+    font-weight: bold;
+    width: 175px;
+    background-color: $gold;
   }
 
   .btn:hover {
@@ -28,16 +33,19 @@ body {
   }
 
   .btn:focus {
-  box-shadow: none;
+    box-shadow: none;
   }
 }
 
-.exchange-rate-box {
+.exchange-rate-box,
+.exchange-calc-box {
   padding: 3rem;
   border: 1px solid gray;
   border-radius: 2rem;
   background: #dcdcdc8f;
+}
 
+.exchange-rate-box {
   ul {
     list-style: disclosure-closed;
     padding-left: 16px;
@@ -53,9 +61,87 @@ body {
   }
 }
 
+.exchange-calc-box {
+  label {
+    font-size: 1.2rem;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .suffix {
+    position: relative;
+  }
+
+  .suffix::after {
+    color: gray;
+    position: absolute;
+    right: 4px;
+  }
+
+  .pen::after {
+    content: 'PEN';
+  }
+
+  .bs::after {
+    content: 'Bs';
+  }
+
+  .usd::after {
+    content: 'USD';
+  }
+
+  input[type=number],
+  #result-op {
+    height: 28px;
+  }
+
+  input[type=number] {
+    margin-left: 36px;
+  }
+
+  #result-op {
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 2px;
+    background-color: white;
+    margin-left: 3px;
+    padding: 1px 2px;
+  }
+
+  @supports (-moz-appearance: textfield) {
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .exchange-rate-box,
+  .exchange-calc-box {
+    padding: 2rem;
+  }
+
+  .exchange-calc-box {
+    input[type=number] {
+      margin-left: 0;
+    }
+
+    #result-op {
+      margin-left: 0;
+    }
+
+    .suffix::after {
+      bottom: 0;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .navbar {
-   padding-top: 0.7rem;
-   padding-bottom: 00.7rem;
+    padding-top: 0.7rem;
+    padding-bottom: 00.7rem;
   }
 }

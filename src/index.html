@@ -51,51 +51,49 @@
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
           <div class="exchange-rate-box">
-            <h2 class="mb-3">Tasa del día:</h2>
+            <h2 class="mb-0">Tasa del día:</h2>
+            <p class="mb-3 ms-1 text-decoration-underline" id="current-date"></p>
             <ul>
-              <li>1 pen => 123456 bs</li>
-              <li>1 usd => 123 pen</li>
-              <li>1 usd => 123456 bs</li>
+              <li id="penBs-rate">1 pen => </li>
+              <li id="usdPen-rate">1 usd => </li>
+              <li id="usdBs-rate">1 usd => </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
   </div>
-  <div class="container-fluid">
+  <div class="container-fluid py-5">
     <section class="container-lg">
-      <h1>Title section 2</h1>
+      <h1 class="text-center mt-4 mb-5">Título de la seccion 2</h1>
       <div class="row flex-row-reverse">
-        <div class="col-lg-6">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="col-lg-6 p-3 px-sm-5 p-lg-3">
+          <h2>Título descriptivo de los servicios prestados</h2>
+          <p>Descripcion detallada --- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
-        <div class="col-lg-6">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-              </div>
+        <div class="col-lg-6 d-flex justify-content-center">
+          <div class="exchange-calc-box d-flex flex-column">
+            <h3 class="text-center mb-3">Calculadora de envíos</h3>
+            <div class="mb-3">
+              <label for="select-op">Operación:</label>
+              <select name="operation" id="select-op">
+                <option value="pen-bs" selected>Soles a Bolívares</option>
+                <option value="usd-pen">Dólares a Soles</option>
+                <option value="usd-bs">Dólares a Bolívares</option>
+              </select>
             </div>
-            <div class="row">
-              <div class="col">
-                <div class="border border-dark">
-                  <h3>Calculadora</h3>
-                  <h4>Seleccione operación a calcular:</h4>
-                  <form>
-                    <input type="radio" id="pen-bs" name="operation" value="pen-bs" checked="true">
-                    <label for="pen-bs">Soles a Bolívares</label>
-                    <input type="radio" id="usd-pen" name="operation" value="usd-pen">
-                    <label for="usd-pen">Dólares a Soles</label>
-                    <input type="radio" id="usd-bs" name="operation" value="usd-bs">
-                    <label for="usd-bs">Dólares a Bolívares</label>
-                    <label for="enter-value">Valor a convertir:</label>
-                    <input type="number" id="enter-value" name="enter-value">
-                    <div></div>
-                  </form>
-                </div>
-              </div>
+            <div class="d-flex flex-column flex-sm-row mb-3 suffix pen" id="calc-input">
+              <label for="enter-value">Monto:</label>
+              <input class="w-100" type="number" id="enter-value" name="enter-value">
+            </div>
+            <div class="d-flex flex-column flex-sm-row mb-1 suffix bs" id="calc-output">
+              <label for="result-op">Resultado:</label>
+              <output class="w-100" for="enter-value" id="result-op" name="result"></output>
+            </div>
+            <div class="text-end mb-3" id="calc-rate"></div>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <button type="button" id="calc-clear">Borrar</button>
+              <button type="button">Crear orden de envío</button>
             </div>
           </div>
         </div>
