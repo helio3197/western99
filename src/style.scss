@@ -61,6 +61,22 @@ body {
   }
 }
 
+.social-media {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1.5rem;
+  }
+}
+
 .exchange-calc-box {
   label {
     font-size: 1.2rem;
@@ -125,10 +141,7 @@ body {
   }
 
   .exchange-calc-box {
-    input[type=number] {
-      margin-left: 0;
-    }
-
+    input[type=number],
     #result-op {
       margin-left: 0;
     }
