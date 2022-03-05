@@ -10,13 +10,13 @@
 <body>
   <header class="container-fluid p-0 navbar-bg shadow-nav" id="navbar">
     <div class="container-lg navbar navbar-expand-lg navbar-light">
-      <button type="button" class="navbar-toggler border-0 p-0" data-bs-toggle="offcanvas" data-bs-target="#navbarSlide">
+      <button type="button" class="navbar-toggler border-0 p-0" data-bs-toggle="offcanvas" data-bs-target="#navbar-slide">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a href="./index.html" class="mx-auto mx-lg-0">
         <img src="images/WBS-logo.png" alt="western99 logo" class="logo">
       </a>
-      <nav class="offcanvas offcanvas-start navbar-collapse border-0 align-items-stretch flex-lg-grow-0 ms-lg-auto" tabindex="-1" id="navbarSlide">
+      <nav class="offcanvas offcanvas-start navbar-collapse border-0 align-items-stretch flex-lg-grow-0 ms-lg-auto" tabindex="-1" id="navbar-slide">
         <div class="offcanvas-header align-self-stretch logo-container d-lg-none">
           <div class="offcanvas-title">
             <h1>Western99</h1>
@@ -75,7 +75,7 @@
       <h1 class="text-center mt-4 mb-5">Título de la seccion 2</h1>
       <div class="row flex-row-reverse">
         <div class="col-lg-6 p-3 px-sm-5 p-lg-3">
-          <h2>Título descriptivo de los servicios prestados</h2>
+          <h2 class="text-center">Título descriptivo de los servicios prestados</h2>
           <p>Descripcion detallada --- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
         <div class="col-lg-6 d-flex justify-content-center">
@@ -91,17 +91,34 @@
             </div>
             <div class="d-flex flex-column flex-sm-row mb-3 suffix pen" id="calc-input">
               <label for="enter-value">Monto:</label>
-              <input class="w-100" type="number" id="enter-value" name="enter-value">
+              <input class="w-100" type="number" id="enter-value" name="enter-value" placeholder="0">
             </div>
             <div class="d-flex flex-column flex-sm-row mb-1 suffix bs" id="calc-output">
               <label for="result-op">Resultado:</label>
-              <output class="w-100" for="enter-value" id="result-op" name="result"></output>
+              <output class="w-100" for="enter-value" id="result-op" name="result">0</output>
             </div>
             <div class="text-end mb-3" id="calc-rate"></div>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
               <button type="button" id="calc-clear">Borrar</button>
               <button type="button">Crear orden de envío</button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col pt-5">
+          <h2 class="text-center mb-5">Trabajamos con los siguientes métodos de pagos:</h2>
+          <div class="carousel carousel-dark slide" id="carousel-venbanks" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+            </ol>
+            <div class="carousel-inner">
+            </div>
+            <a class="carousel-control-prev" href="#carousel-venbanks" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-venbanks" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
           </div>
         </div>
       </div>

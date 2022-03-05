@@ -1,14 +1,19 @@
 import './style.scss';
 import mobileDesktopSwap from './navbar.js';
-import { exhangeCalc, displayRates } from './utils.js';
+import { exhangeCalc, displayRates, carouselHandler } from './utils.js';
 
-// dummy rates
+// dummy data
 const exchangeRates = {
   penBs: '123',
   usdPen: '12',
   usdBs: '12345',
   date: '27/02/2022',
 };
+const carouselimages = [
+  { path: './placeholder-2.png', alt: 'Slide 1' },
+  { path: './placeholder-2.png', alt: 'Slide 2' },
+  { path: './placeholder-2.png', alt: 'Slide 3' },
+];
 
 // mobile manu handler
 const mobileDesktopQuery = window.matchMedia('(min-width: 992px)');
@@ -51,5 +56,19 @@ operation.addEventListener('change', (e) => {
 // clear btn
 document.getElementById('calc-clear').addEventListener('click', () => {
   inputCalc.value = '';
-  outputCalc.value = '';
+  outputCalc.value = '0';
+});
+
+// banks carousel
+const media920 = window.matchMedia('(min-width: 920px)');
+const media1400 = window.matchMedia('(min-width: 1400px)');
+
+carouselHandler(carouselimages, media920, media1400);
+
+media920.addEventListener('change', () => {
+  carouselHandler(carouselimages, media920, media1400);
+});
+
+media1400.addEventListener('change', () => {
+  carouselHandler(carouselimages, media920, media1400);
 });

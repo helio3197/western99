@@ -1,5 +1,5 @@
 const mobileDesktopSwap = (mediaQuery) => {
-  const navSlide = document.getElementById('navbarSlide');
+  const navSlide = document.getElementById('navbar-slide');
   if (mediaQuery.matches) {
     navSlide.classList.toggle('offcanvas', false);
     navSlide.classList.toggle('offcanvas-start', false);
