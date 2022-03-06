@@ -13,27 +13,27 @@ body {
   background-color: $gold;
 }
 
+.btn {
+  font-size: large;
+  font-weight: bold;
+  width: 175px;
+  background-color: $gold;
+}
+
+.btn:hover {
+  color: $gold;
+  background-color: black;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
 #headline {
   background: url('./assets/placeholder.png');
 
   h1 {
     font-size: calc(1.7rem + 1.5vw);
-  }
-
-  .btn {
-    font-size: large;
-    font-weight: bold;
-    width: 175px;
-    background-color: $gold;
-  }
-
-  .btn:hover {
-    color: $gold;
-    background-color: black;
-  }
-
-  .btn:focus {
-    box-shadow: none;
   }
 }
 
@@ -151,6 +151,23 @@ body {
   max-width: 433px;
   margin: 0 auto;
   display: block;
+}
+
+.info-pill {
+  margin: 0;
+  text-align: center;
+  border: 1px solid gray;
+  padding: 6px 0;
+  background: lightgray;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 365px;
+}
+
+.section3-btn {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 1rem;
 }
 
 @media (max-width: 575px) {

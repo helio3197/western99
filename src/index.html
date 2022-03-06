@@ -52,7 +52,7 @@
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
           <div class="exchange-rate-box">
             <h2 class="mb-0">Tasa del día:</h2>
-            <p class="mb-3 ms-1 text-decoration-underline" id="current-date"></p>
+            <p class="mb-3 ms-1 text-decoration-underline current-date"></p>
             <ul>
               <li id="penBs-rate">1 pen => </li>
               <li id="usdPen-rate">1 usd => </li>
@@ -63,9 +63,9 @@
       </div>
       <div class="row mt-4">
         <ul class="social-media">
-          <li><a href="http://" target="_blank" rel="noopener noreferrer" class="fa-brands fa-facebook"></a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer" class="fa-brands fa-instagram"></a></li>
-          <li><a href="http://" target="_blank" rel="noopener noreferrer" class="fa-brands fa-whatsapp"></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-facebook"></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-instagram"></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-whatsapp"></a></li>
         </ul>
       </div>
     </section>
@@ -124,10 +124,24 @@
       </div>
     </section>
   </div>
-  <div class="container-fluid py-5">
+  <div class="container-fluid pb-5">
     <section class="container-lg">
-      <h1 class="text-center">Título de la seccion 3</h1>
-      <p>Invitacíon al usario para usar los servicios ---- Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <h1 class="text-center mb-5">Título de la seccion 3</h1>
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column align-items-center pb-5">
+          <h2 class="text-center mb-3">Hasta el dia <span class="current-date fw-bold"></span> hemos procesado:</h2>
+          <h3 class="info-pill mb-3"><span class="fw-bold" id="realized-operations" data-animate="true"></span> operaciones.</h3>
+          <h3 class="info-pill mb-4">USD <span class="fw-bold" id="realized-money" data-animate="true"></span> en remesas.</h3>
+          <a class="btn section3-btn" href="#">Enviar Dinero Ahora!</a>
+        </div>
+        <div class="col-lg-6 pb-5">
+          <p>Desea saber mas? visite nuetra pagina de preguntas frequentes</p>
+          <a href="#" target="_blank" rel="noopener noreferrer">Preguntas Frequentes</a>
+          <div><span></span><p>O</p><span></span></div>
+          <p>Contactanos!</p>
+          <button type="button">Contacto</button>
+        </div>
+      </div>
     </section>
   </div>
   <footer></footer>
