@@ -1,4 +1,5 @@
 import './style.scss';
+import placeholder2 from './assets/placeholder-2.png';
 import mobileDesktopSwap from './navbar.js';
 import {
   exhangeCalc, displayRates, carouselHandler, animateValue,
@@ -12,10 +13,10 @@ const exchangeRates = {
   date: '27/02/2022',
 };
 const carouselimages = [
-  { path: './placeholder-2.png', alt: 'Slide 1' },
-  { path: './placeholder-2.png', alt: 'Slide 2' },
-  { path: './placeholder-2.png', alt: 'Slide 3' },
-  { path: './placeholder-2.png', alt: 'Slide 4' },
+  { path: placeholder2, alt: 'Slide 1' },
+  { path: placeholder2, alt: 'Slide 2' },
+  { path: placeholder2, alt: 'Slide 3' },
+  { path: placeholder2, alt: 'Slide 4' },
 ];
 
 // set current day for selected elements
