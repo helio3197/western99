@@ -196,11 +196,33 @@ body {
 .faq-link {
   color: lightgray;
   text-decoration: underline lightgray;
+  transition: all 0.2s;
 
   &:hover {
     color: gray;
     text-decoration: underline gray;
   }
+}
+
+footer {
+  background-color: #1c1a19;
+
+  .nav-link {
+    color: #dee2e6;
+    border-bottom: 1px solid gray;
+
+    &:hover {
+      color: gray;
+    }
+  }
+}
+
+.border-footer {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.fs-footer-nav {
+  font-size: 1.25rem;
 }
 
 @media (max-width: 575px) {
@@ -222,6 +244,17 @@ body {
 
   .info-card {
     padding: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .border-footer {
+    border-bottom: 0;
+    border-right: 1px solid #dee2e6;
+  }
+
+  .fs-footer-nav {
+    font-size: 1rem;
   }
 }
 
