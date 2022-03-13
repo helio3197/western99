@@ -13,6 +13,12 @@ body {
   background-color: $gold;
 }
 
+#navbar-slide {
+  width: 80%;
+  max-width: 400px;
+  min-width: 200px;
+}
+
 .btn {
   font-size: large;
   font-weight: bold;
@@ -225,6 +231,13 @@ footer {
   font-size: 1.25rem;
 }
 
+@media (max-width: 200px) {
+  #navbar-slide {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
 @media (max-width: 575px) {
   .exchange-rate-box,
   .exchange-calc-box {
@@ -269,6 +282,12 @@ footer {
   .navbar {
     padding-top: 0.7rem;
     padding-bottom: 00.7rem;
+  }
+
+  #navbar-slide {
+    width: auto;
+    min-width: auto;
+    max-width: none;
   }
 }
 
