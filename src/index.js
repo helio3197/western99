@@ -2,7 +2,7 @@ import './style.scss';
 import placeholder2 from './assets/placeholder-2.png';
 import mobileDesktopSwap from './navbar.js';
 import {
-  exhangeCalc, displayRates, carouselHandler, animateValue,
+  exhangeCalc, displayRates, carouselHandler, animateValue, contactFormHandler,
 } from './utils.js';
 
 // dummy data
@@ -102,3 +102,8 @@ const showOperationsNumb = () => {
 showOperationsNumb();
 
 window.addEventListener('scroll', showOperationsNumb);
+
+// contact form handler
+const contactBtn = document.getElementById('contact-btn');
+
+contactBtn.addEventListener('click', contactFormHandler);

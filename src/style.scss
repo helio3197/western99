@@ -22,7 +22,8 @@ body {
 .btn {
   font-size: large;
   font-weight: bold;
-  width: 175px;
+  width: 100%;
+  max-width: 175px;
   background-color: $gold;
 }
 
@@ -210,6 +211,102 @@ body {
   }
 }
 
+.contact-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 20px;
+  background: $gold;
+  padding: 4px 7px;
+  border-radius: 20px;
+  z-index: 999;
+  border: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 58px;
+  transition: all 0.5s;
+
+  @media (hover: hover) {
+    &:hover {
+      width: 184px;
+    }
+  }
+}
+
+.contact-btn-clicked {
+  background-color: #504b49;
+
+  path {
+    fill: $gold;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      width: 58px;
+      background-color: $gold;
+
+      path {
+        fill: black;
+      }
+    }
+  }
+}
+
+.contact-form-notvisible {
+  display: none;
+}
+
+.contact-form-visible {
+  display: block;
+}
+
+.contact-form-modal {
+  padding: 18px;
+  width: 380px;
+  position: fixed;
+  right: 24px;
+  bottom: 84px;
+  color: white;
+  background-color: #504b49;
+  z-index: 999;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+  border-radius: 1rem;
+  max-height: calc(100vh - 84px);
+  overflow: auto;
+
+  section, form {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    label {
+      margin-bottom: 4px;
+    }
+
+    input:not([type="submit"]), textarea, textarea:focus {
+      background-color: #909090;
+      border-color: #3c3c3c;
+      color: black;
+
+      &::placeholder, &::placeholder {
+        color: #3c3c3c;
+      }
+    }
+
+    input:not([type="submit"]) {
+      margin-bottom: 8px;
+    }
+
+    textarea {
+      max-height: 150px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
 footer {
   background-color: #1c1a19;
 
@@ -257,6 +354,15 @@ footer {
 
   .info-card {
     padding: 12px;
+  }
+
+  .contact-form-modal {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
   }
 }
 
