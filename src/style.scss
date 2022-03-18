@@ -39,7 +39,7 @@ body {
 #headline {
   background: url('./assets/placeholder.png');
 
-  h1 {
+  .main-title {
     font-size: calc(1.7rem + 1.5vw);
   }
 }
@@ -287,6 +287,11 @@ body {
       margin-bottom: 4px;
     }
 
+    textarea {
+      max-height: 150px;
+      margin-bottom: 16px;
+    }
+
     input:not([type="submit"]),
     textarea,
     textarea:focus {
@@ -301,11 +306,6 @@ body {
 
     input:not([type="submit"]) {
       margin-bottom: 8px;
-    }
-
-    textarea {
-      max-height: 150px;
-      margin-bottom: 16px;
     }
 
     [type="tel"]:disabled {
