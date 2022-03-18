@@ -107,3 +107,17 @@ window.addEventListener('scroll', showOperationsNumb);
 const contactBtn = document.getElementById('contact-btn');
 
 contactBtn.addEventListener('click', contactFormHandler);
+document.getElementById('not-phone').addEventListener('change', (e) => {
+  const phoneInput = document.getElementById('phone');
+  const emailInput = document.getElementById('email');
+  if (e.target.checked) {
+    phoneInput.disabled = true;
+    phoneInput.value = '';
+    emailInput.required = true;
+    emailInput.previousElementSibling.innerHTML = 'Correo:';
+  } else {
+    phoneInput.disabled = false;
+    emailInput.required = false;
+    emailInput.previousElementSibling.innerHTML = 'Correo (Opcional):';
+  }
+});
