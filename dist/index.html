@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Western99</title>
+  <script src="https://kit.fontawesome.com/3ce771f0c3.js" crossorigin="anonymous"></script>
+<script defer src="main.js"></script></head>
+<body>
+  <header class="container-fluid p-0 navbar-bg shadow-nav" id="navbar">
+    <div class="container-lg navbar navbar-expand-lg navbar-light">
+      <button type="button" class="navbar-toggler border-0 p-0" data-bs-toggle="offcanvas" data-bs-target="#navbar-slide">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="./index.html" class="mx-auto mx-lg-0">
+        <img src=".assets/western99.png" alt="western99 logo" class="logo">
+      </a>
+      <nav class="offcanvas offcanvas-start navbar-collapse border-0 align-items-stretch flex-lg-grow-0 ms-lg-auto" tabindex="-1" id="navbar-slide">
+        <div class="offcanvas-header align-self-stretch logo-container d-lg-none">
+          <div class="offcanvas-title">
+            <h1>Western99</h1>
+          </div>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" id="closeMenu"></button>
+        </div>
+        <div class="navbar-nav navbar-items gap-lg-4 align-items-start align-items-lg-center ps-4 p-lg-0">
+          <a href="#" class="nav-item nav-link p-1">Servicios</a>
+          <a href="#" class="nav-item nav-link p-1">Sobre Nosotros</a>
+          <a href="#" class="nav-item nav-link p-1">Preguntas Frequentes</a>
+          <a href="#" class="nav-item nav-link p-1">Contacto</a>
+          <div class="button-join">
+            <a href="#">Mi Cuenta</a>
+          </div>
+          <div class="button-join">
+            <a href="#">Envía dinero</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="container-fluid py-5" id="headline">
+    <section class="container-lg">
+      <div class="row">
+        <div class="col-lg-6 py-reg d-flex flex-column justify-content-center text-center">
+          <h1 class="main-title">Titulo principal aquí no muy largo</h1>
+          <h2>Breve descripcion aqui</h2>
+          <div class="d-flex flex-wrap gap-3 justify-content-center mt-5">
+            <a class="btn" href="#">Enviar remesa</a>
+            <a class="btn" href="#">Más información</a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <div class="exchange-rate-box">
+            <h2 class="mb-0">Tasa del día:</h2>
+            <p class="mb-3 ms-1 text-decoration-underline current-date"></p>
+            <ul>
+              <li id="penBs-rate">1 pen => </li>
+              <li id="usdPen-rate">1 usd => </li>
+              <li id="usdBs-rate">1 usd => </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <ul class="social-media">
+          <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-facebook"></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-instagram"></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-whatsapp"></a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid py-5">
+    <section class="container-lg">
+      <h1 class="text-center mt-4 mb-5">Título de la seccion 2</h1>
+      <div class="row flex-row-reverse">
+        <div class="col-lg-6 p-3 px-sm-5 p-lg-3">
+          <h2 class="text-center mb-3">Título descriptivo de los servicios prestados</h2>
+          <p class="text-center">Descripcion detallada --- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center">
+          <div class="exchange-calc-box d-flex flex-column">
+            <h3 class="text-center mb-3">Calculadora de envíos</h3>
+            <div class="mb-3">
+              <label for="select-op">Operación:</label>
+              <select name="operation" id="select-op">
+                <option value="pen-bs" selected>Soles a Bolívares</option>
+                <option value="usd-pen">Dólares a Soles</option>
+                <option value="usd-bs">Dólares a Bolívares</option>
+              </select>
+            </div>
+            <div class="d-flex flex-column flex-sm-row mb-3 suffix pen" id="calc-input">
+              <label for="enter-value">Monto:</label>
+              <input class="w-100" type="number" id="enter-value" name="enter-value" placeholder="0">
+            </div>
+            <div class="d-flex flex-column flex-sm-row mb-1 suffix bs" id="calc-output">
+              <label for="result-op">Resultado:</label>
+              <output class="w-100" for="enter-value" id="result-op" name="result">0</output>
+            </div>
+            <div class="text-end mb-3" id="calc-rate"></div>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <button type="button" id="calc-clear">Borrar</button>
+              <button type="button">Crear orden de envío</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col pt-5">
+          <h2 class="text-center mb-5">Trabajamos con los siguientes métodos de pagos:</h2>
+          <div class="carousel carousel-dark slide" id="carousel-venbanks" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+            </ol>
+            <div class="carousel-inner">
+            </div>
+            <a class="carousel-control-prev" href="#carousel-venbanks" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-venbanks" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid pt-5 py-lg-5 section3">
+    <section class="container-lg">
+      <h1 class="text-center mb-4 mb-lg-5">Título de la seccion 3</h1>
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column align-items-center pb-5">
+          <h2 class="text-center mb-4">Hasta el dia <span class="current-date fw-bold"></span> hemos procesado:</h2>
+          <h3 class="info-pill mb-3"><span class="fw-bold" id="realized-operations" data-animate="true"></span> operaciones.</h3>
+          <h3 class="info-pill mb-4">USD <span class="fw-bold" id="realized-money" data-animate="true"></span> en remesas.</h3>
+          <a class="btn section3-btn" href="#">Enviar Dinero Ahora!</a>
+        </div>
+        <div class="col-lg-6 pb-5 d-flex justify-content-center">
+          <div class="info-card text-light d-flex flex-column">
+            <h2 class="text-center fw-bold mb-3">Desea saber más?</h2>
+            <a href="#" class="text-center faq-link"><h3 class="mb-3">Visita nuestra página de preguntas frequentes.</h3></a>
+            <div class="d-flex align-items-center mb-3"><span class="border w-100"></span><h3 class="my-0 mx-2">o</h3><span class="border w-100"></span></div>
+            <button type="button" class="btn btn-alternate section3-btn align-self-center">Contáctanos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <button type="button" class="contact-btn" id="contact-btn">
+    <svg width="44" height="44" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+      <path d="M7 12L17 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 8L13 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3 20.2895V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V15C21 16.1046 20.1046 17 19 17H7.96125C7.35368 17 6.77906 17.2762 6.39951 17.7506L4.06852 20.6643C3.71421 21.1072 3 20.8567 3 20.2895Z" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+    <span class="fw-bold fs-5 ms-2">¡Escríbenos!</span>
+  </button>
+  <div class="contact-form-modal contact-form-notvisible" id="contact-modal">
+    <section>
+      <span class="d-flex">
+        <h1 class="mx-auto text-center">Consultas o sugerencias?</h1>
+        <button type="button" class="btn-close btn-close-white d-sm-none" id="close-contact-modal"></button>
+      </span>
+      <h2 class="fs-4 text-center">Escríbenos al whatsapp <a href="" class="faq-link">123456789</a></h2>
+      <div class="d-flex align-items-center mb-3"><span class="border flex-grow-1"></span><h3 class="my-0 mx-2 fs-4 text-center">o déjanos un mensaje:</h3><span class="border flex-grow-1"></span></div>
+      <form id="contact-form">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" required placeholder="Nombre" maxlength="32" class="form-control">
+        <div class="d-flex justify-content-between  flex-wrap gap-1">
+          <label for="phone">Teléfono:</label>
+          <div class="d-flex align-items-center">
+            <input type="checkbox" name="not-phone" id="not-phone" class="me-1 form-check-input">
+            <label for="not-phone">No tengo número telefónico</label>
+          </div>
+        </div>
+        <input type="tel" name="phone" id="phone" placeholder="Nro telefónico" maxlength="9" class="form-control">
+        <label for="email">Correo (Opcional):</label>
+        <input type="email" name="email" id="email" placeholder="Email" maxlength="32" class="form-control">
+        <label for="message">Mensaje:</label>
+        <textarea name="message" id="message" required placeholder="Mensaje" maxlength="300" class="form-control"></textarea>
+        <input type="submit" value="Enviar" class="btn">
+      </form>
+    </section>
+  </div>
+  <footer class="container-fluid py-4">
+    <div class="container-md">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center justify-content-center gap-4 pb-4 pb-md-0 border-footer">
+          <ul class="social-media order-md-last">
+            <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-facebook"></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-instagram"></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer" class="fa-brands fa-whatsapp"></a></li>
+          </ul>
+          <a href="./index.html">
+            <img src=".assets/western99.png" alt="western99 logo" class="logo">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-8 p-4 py-md-0 d-lg-flex align-items-center">
+          <nav class="nav flex-column flex-lg-row align-items-center align-items-md-start align-items-lg-center justify-content-xl-between gap-lg-2 gap-xl-0 text-center w-100 fs-footer-nav">
+            <a href="#" class="nav-item nav-link p-1">Servicios</a>
+            <a href="#" class="nav-item nav-link p-1">Sobre Nosotros</a>
+            <a href="#" class="nav-item nav-link p-1">Preguntas Frequentes</a>
+            <a href="#" class="nav-item nav-link p-1">Contacto</a>
+            <a href="#" class="nav-item nav-link p-1">Iniciar Sesión</a>
+            <a href="#" class="nav-item nav-link p-1">Registrarse</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
