@@ -156,6 +156,34 @@ const contactFormHandler = (e) => {
   openFormBtn.addEventListener('click', closeForm);
 };
 
+const displayFormResult = (result, err = '') => {
+  const contactform = document.getElementById('contact-form');
+  const resultEl = document.createElement('div');
+  resultEl.className = 'contact-form-result-overlay';
+
+  switch (result) {
+    case 'sucess':
+      resultEl.innerHTML = `
+      <h3>Tu mensaje fue enviado!</h3>
+      <p>Pronto recibirás una respuesta.</p>
+      <button type="button" onclick="this.parentElement.remove()" class="btn mt-3">Aceptar</button>
+      `;
+      contactform.appendChild(resultEl);
+      break;
+    case 'fail':
+      resultEl.innerHTML = `
+      <h3>Un error ha occurrido!</h3>
+      <p>${err}</p>
+      <p>Intente de nuevo.</p>
+      <button type="button" onclick="this.parentElement.remove()" class="btn mt-3">Aceptar</button>
+      `;
+      contactform.appendChild(resultEl);
+      break;
+    default:
+      break;
+  }
+};
+
 export {
-  exhangeCalc, displayRates, carouselHandler, animateValue, contactFormHandler,
+  exhangeCalc, displayRates, carouselHandler, animateValue, contactFormHandler, displayFormResult,
 };

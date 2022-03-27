@@ -3,7 +3,7 @@ import placeholder2 from './assets/placeholder-2.png';
 import mobileDesktopSwap from './navbar.js';
 import sendMessage from './firebase-database.js';
 import {
-  exhangeCalc, displayRates, carouselHandler, animateValue, contactFormHandler,
+  exhangeCalc, displayRates, carouselHandler, animateValue, contactFormHandler, displayFormResult,
 } from './utils.js';
 
 // dummy data
@@ -133,8 +133,8 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
     message: { value: message },
   } = e.target.elements;
   sendMessage(name, phone, email, message)
-    .then((res) => {
-      console.log(res);
+    .then(() => {
+      displayFormResult('sucess');
       const {
         name, phone, email, message,
       } = e.target.elements;
@@ -143,5 +143,5 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
       email.value = '';
       message.value = '';
     })
-    .catch((err) => alert(`Something went wrong: ${err}`));
+    .catch((err) => displayFormResult('fail', err));
 });

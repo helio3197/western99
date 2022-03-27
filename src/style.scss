@@ -278,6 +278,7 @@ body {
   form {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     h1 {
       font-size: 28px;
@@ -317,6 +318,19 @@ body {
       }
     }
   }
+}
+
+.contact-form-result-overlay {
+  position: absolute;
+  background: #504b49;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
