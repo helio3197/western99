@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/extensions */
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import {
-  getDatabase, ref, onValue, set, push
+  getDatabase, ref, onValue, set, push,
 } from 'firebase/database';
 
 // firebase config
