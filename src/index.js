@@ -1,8 +1,9 @@
 import './style.scss';
 import placeholder2 from './assets/placeholder-2.png';
 import mobileDesktopSwap from './navbar.js';
+import sendMessage from './firebase-database.js';
 import {
-  exhangeCalc, displayRates, carouselHandler, animateValue, contactFormHandler,
+  exhangeCalc, displayRates, carouselHandler, animateValue, contactFormHandler, displayFormResult,
 } from './utils.js';
 
 // dummy data
@@ -120,4 +121,27 @@ document.getElementById('not-phone').addEventListener('change', (e) => {
     emailInput.required = false;
     emailInput.previousElementSibling.innerHTML = 'Correo (Opcional):';
   }
+});
+
+// contact form send message
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const {
+    name: { value: name },
+    phone: { value: phone },
+    email: { value: email },
+    message: { value: message },
+  } = e.target.elements;
+  sendMessage(name, phone, email, message)
+    .then(() => {
+      displayFormResult('sucess');
+      const {
+        name, phone, email, message,
+      } = e.target.elements;
+      name.value = '';
+      phone.value = '';
+      email.value = '';
+      message.value = '';
+    })
+    .catch((err) => displayFormResult('fail', err));
 });
