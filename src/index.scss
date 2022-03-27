@@ -1,0 +1,27 @@
+$gold: #ffdc00;
+
+body {
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+}
+
+.py-reg {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
+.btn {
+  font-size: large;
+  font-weight: bold;
+  width: 100%;
+  max-width: 175px;
+  background-color: $gold;
+}
+
+.btn:hover {
+  color: $gold;
+  background-color: black;
+}
+
+.btn:focus {
+  box-shadow: none;
+}

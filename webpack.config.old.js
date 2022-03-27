@@ -22,12 +22,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        options: { presets: ['@babel/env'] },
-      },
-      {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
@@ -36,8 +30,5 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-  },
-  resolve: {
-    extensions: ['*', '.js', '.jsx'],
   },
 };
