@@ -155,10 +155,10 @@
   </button>
   <div class="contact-form-modal contact-form-notvisible" id="contact-modal">
     <section>
-      <span class="d-flex">
+      <div class="d-flex">
         <h1 class="mx-auto text-center">Consultas o sugerencias?</h1>
         <button type="button" class="btn-close btn-close-white d-sm-none" id="close-contact-modal"></button>
-      </span>
+      </div>
       <h2 class="fs-4 text-center">Escríbenos al whatsapp <a href="" class="faq-link">123456789</a></h2>
       <div class="d-flex align-items-center mb-3"><span class="border flex-grow-1"></span><h3 class="my-0 mx-2 fs-4 text-center">o déjanos un mensaje:</h3><span class="border flex-grow-1"></span></div>
       <form id="contact-form">
@@ -171,7 +171,7 @@
             <label for="not-phone">No tengo número telefónico</label>
           </div>
         </div>
-        <input type="tel" name="phone" id="phone" placeholder="Nro telefónico" maxlength="9" class="form-control">
+        <input type="tel" name="phone" id="phone" placeholder="Nro telefónico" maxlength="9" class="form-control" required>
         <label for="email">Correo (Opcional):</label>
         <input type="email" name="email" id="email" placeholder="Email" maxlength="32" class="form-control">
         <label for="message">Mensaje:</label>
