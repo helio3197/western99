@@ -1,5 +1,9 @@
 $gold: #ffdc00;
 
+$theme-colors: (
+  "primary": $gold
+);
+
 body {
   font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
 }
@@ -25,3 +29,5 @@ body {
 .btn:focus {
   box-shadow: none;
 }
+
+@import "~bootstrap/scss/bootstrap";

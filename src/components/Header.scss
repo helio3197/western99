@@ -1,17 +1,11 @@
-$gold: #ffdc00;
-
-.navbar-bg {
-  background-color: $gold;
-}
-
-#navbar-slide {
+#navbar-sidemenu {
   width: 80%;
   max-width: 400px;
   min-width: 200px;
 }
 
 @media (max-width: 200px) {
-  #navbar-slide {
+  #navbar-sidemenu {
     width: 100%;
     min-width: auto;
   }
@@ -23,7 +17,7 @@ $gold: #ffdc00;
     padding-bottom: 00.7rem;
   }
 
-  #navbar-slide {
+  #navbar-sidemenu {
     width: auto;
     min-width: auto;
     max-width: none;
